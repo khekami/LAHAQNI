@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link connexionFragment#newInstance} factory method to
+ * Use the {@link loginFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class connexionFragment extends Fragment {
+public class loginFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class connexionFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public connexionFragment() {
+    public loginFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +34,11 @@ public class connexionFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment connexionFragment.
+     * @return A new instance of fragment loginFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static connexionFragment newInstance(String param1, String param2) {
-        connexionFragment fragment = new connexionFragment();
+    public static loginFragment newInstance(String param1, String param2) {
+        loginFragment fragment = new loginFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,6 @@ public class connexionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_connexion, container, false);
+        return inflater.inflate(R.layout.fragment_login, container, false);
     }
 }

@@ -14,11 +14,14 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Homechauffeur extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     NavigationView navigationView;
+
+    FirebaseAuth mauth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class Homechauffeur extends AppCompatActivity implements NavigationView.O
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        mauth = FirebaseAuth.getInstance();
 
     }
 
