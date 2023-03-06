@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/ic_notification"
+        android:title="Notification"
+        app:showAsAction="never"/>
+    <item
+    android:id="@+id/action_profil"
+    android:icon="@drawable/ic_launcherprofil"
+    android:title="Profil"
+    app:showAsAction="never"/>
+    <item
+    android:id="@+id/action_cagnote"
+        android:icon="@drawable/ic_launchereuro"
+        android:title="Cagnote"
+        app:showAsAction="never"/>
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Accueil"
+    android:orientation="vertical"
+    android:background="@color/appli">
+
+    <TextView
+        android:id="@+id/welcomemessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Bienvenue!"
+        android:background="@color/teal_700"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/chauffeur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="je suis chauffeur"
+        android:layout_marginTop="100dp"
+        android:onClick="onButton1Click"
+        android:layout_gravity="center"
+
+        />
+
+    <Button
+        android:id="@+id/client"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="onButton2Click"
+        android:text="je suis client " />
+
+
+</LinearLayout>
