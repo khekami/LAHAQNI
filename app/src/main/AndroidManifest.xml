@@ -15,13 +15,13 @@
             android:name=".login"
             android:exported="false" />
         <activity
-            android:name=".Accueil"
+            android:name=".Homechauffeur"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Homechauffeur"
+            android:name=".Accueil"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

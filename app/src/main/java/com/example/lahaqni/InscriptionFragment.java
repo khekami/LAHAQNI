@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,10 +56,24 @@ public class InscriptionFragment extends Fragment {
         }
     }
 
+    TextView connexion;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inscription, container, false);
+        View view = inflater.inflate(R.layout.fragment_inscription, container, false);
+
+        connexion = view.findViewById(R.id.connexion);
+        connexion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((login) getActivity()).afficherFragmentLogin();
+            }
+        });
+
+
+        return view;
     }
 }
