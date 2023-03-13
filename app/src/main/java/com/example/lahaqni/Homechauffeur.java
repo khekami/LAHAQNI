@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,11 +24,12 @@ public class Homechauffeur extends AppCompatActivity implements NavigationView.O
 
     FirebaseAuth mauth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homechauffeur);
-
+        Intent intent = getIntent();
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.chomech);
@@ -40,8 +42,12 @@ public class Homechauffeur extends AppCompatActivity implements NavigationView.O
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        mauth = FirebaseAuth.getInstance();
+        if(savedInstanceState==null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragchauffeur, new ProfilFragment()).commit();
+            navigationView.setCheckedItem(R.id.action_profil);
 
+        }
+        mauth = FirebaseAuth.getInstance();
     }
 
 
@@ -60,11 +66,17 @@ public class Homechauffeur extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){
             case R.id.action_cagnote:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragchauffeur,new cagnoteFragment()).commit();
                 Toast.makeText(getApplicationContext(), "Money !!", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.action_profil:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragchauffeur,new ProfilFragment()).commit();
                 Toast.makeText(getApplicationContext(), "Info Profil", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.action_notification:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragchauffeur,new NotificationFragment()).commit();
                 Toast.makeText(getApplicationContext(), "Info notif", Toast.LENGTH_SHORT).show();
+
         }
         return true;
     }

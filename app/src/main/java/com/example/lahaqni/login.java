@@ -19,6 +19,8 @@ public class login extends AppCompatActivity {
                 .beginTransaction()
                 .add(R.id.frag_container, new loginFragment())
                 .commit();
+        String users = intent.getStringExtra("users");
+
 
 
     }

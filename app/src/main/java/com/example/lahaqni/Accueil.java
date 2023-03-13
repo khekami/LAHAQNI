@@ -25,6 +25,7 @@ public class Accueil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent ch = new Intent(getApplicationContext(), login.class);
+                ch.putExtra("users", "chauffeur");
                 startActivity(ch);
             }
         });
@@ -32,6 +33,7 @@ public class Accueil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent cl = new Intent(getApplicationContext(), login.class);
+                cl.putExtra("users","client");
                 startActivity(cl);
             }
         });
